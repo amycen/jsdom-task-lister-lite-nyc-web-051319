@@ -9,11 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
   li.id = newTask;
   const textnode = document.createTextNode(newTask);
   const newButton = document.createElement("button");
-  new_button.innerHTML = "x";
+  newButton.innerHTML = "x";
+
+
   li.appendChild(textnode);
-  li.appendChild(new_button);
+  li.appendChild(newButton);
   document.getElementById('tasks').appendChild(li);
   formTag.reset();
+  newButton.addEventListener('click', function() {
+    li.remove();
+  }
+  )
   })
 
 })
